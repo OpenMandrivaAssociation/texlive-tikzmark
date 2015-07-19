@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-tikzmark
 Version:	1.0
-Release:	8
+Release:	9
 Summary:	Use TikZ's method of remembering a position on a page
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzmark
