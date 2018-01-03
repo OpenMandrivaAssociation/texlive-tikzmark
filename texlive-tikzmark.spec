@@ -1,12 +1,6 @@
-# revision 29999
-# category Package
-# catalog-ctan /graphics/pgf/contrib/tikzmark
-# catalog-date 2013-04-17 11:11:14 +0200
-# catalog-license lppl1.3
-# catalog-version 1.0
 Name:		texlive-tikzmark
-Version:	1.0
-Release:	9
+Version:	1.3
+Release:	1
 Summary:	Use TikZ's method of remembering a position on a page
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzmark
@@ -34,13 +28,10 @@ exclusively) with TikZ.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
-%{_texmfdistdir}/tex/latex/tikzmark/tikzmarklibrarylistings.code.tex
-%doc %{_texmfdistdir}/doc/latex/tikzmark/README.txt
-%doc %{_texmfdistdir}/doc/latex/tikzmark/tikzmark.pdf
+%{_texmfdistdir}/tex/latex/tikzmark
+%doc %{_texmfdistdir}/doc/latex/tikzmark
 #- source
-%doc %{_texmfdistdir}/source/latex/tikzmark/tikzmark.dtx
-%doc %{_texmfdistdir}/source/latex/tikzmark/tikzmark.ins
+%doc %{_texmfdistdir}/source/latex/tikzmark
 
 #-----------------------------------------------------------------------
 %prep
