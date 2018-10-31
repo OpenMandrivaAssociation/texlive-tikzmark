@@ -1,6 +1,6 @@
 Name:		texlive-tikzmark
 Version:	1.3
-Release:	1
+Release:	2
 Summary:	Use TikZ's method of remembering a position on a page
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzmark
