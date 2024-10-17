@@ -3,7 +3,7 @@ Version:	64819
 Release:	2
 Summary:	Use TikZ's method of remembering a position on a page
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzmark
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzmark
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzmark.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzmark.doc.r%{version}.tar.xz
