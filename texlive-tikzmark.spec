@@ -1,45 +1,23 @@
-Name:		texlive-tikzmark
-Version:	64819
-Release:	2
-Summary:	Use TikZ's method of remembering a position on a page
+%global tl_name tikzmark
+%global tl_revision 79232
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.16
+Release:	%{tl_revision}.1
+Summary:	Use TikZs method of remembering a position on a page
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzmark
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzmark.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzmark.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzmark.source.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzmark.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzmark.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzmark.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The tikzmark package defines a command to "remember" a position
-on a page for later (or earlier) use, primarily (but not
-exclusively) with TikZ.
+The tikzmark package defines a command to "remember" a position on a
+page for later (or earlier) use, primarily (but not exclusively) with
+TikZ.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/tikzmark
-%doc %{_texmfdistdir}/doc/latex/tikzmark
-#- source
-%doc %{_texmfdistdir}/source/latex/tikzmark
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
